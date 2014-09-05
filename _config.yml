@@ -1,0 +1,56 @@
+# Site settings
+title: Journal of David Turner
+name: Journal of David Turner
+description: "CTO and cofounder of Get Invited (https://getinvited.to). Creator of Simply Written (http://simply-written.com) and ReferenceIt (https://referenceit.org)."
+twitter: "CTO and cofounder of Get Invited (https://getinvited.to). Creator of Simply Written (http://simply-written.com) and ReferenceIt (https://referenceit.org)."
+baseurl: "" # the subpath of your site, e.g. /blog/
+# url: "http://wip.theinternetisfor.info"
+# url: "http://localhost:4000"
+url: "http://davidturner.name" # the base hostname & protocol for your site
+twitter_username: HerrWulf
+github_username:  davidturner
+timezone: "Europe/London"
+permalink: /:title/
+author:
+  name: David Turner
+  email: hi@davidturner.name
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+
+owner:
+  name:           David Turner
+  avatar:         avatar.jpg
+  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
+  email:          hi@davidturner.name
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        HerrWulf
+  github:         davidturner
+
+# Analytics and webmaster tools stuff goes here
+google_analytics: UA-16030018-1
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+paginate: 10
+paginate_path: "/journal/page/:num/"
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: Projects
+    url: /projects/
+  - title: Github
+    url: https://github.com/davidturner
+    external: true
+  - title: Twitter
+    url: https://twitter.com/HerrWulf
+    external: true
+  - title: RSS
+    url: /feed.xml
+
+include: ['.htaccess']
+exclude: ['Rakefile.rb','Gemfile','Gemfile.lock','feed.xsl']

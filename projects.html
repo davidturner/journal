@@ -1,0 +1,27 @@
+---
+layout: projects
+title: Projects
+permalink: /projects/
+---
+<div class="projects">
+{% assign type = 'odd' %}
+{% assign projects = (site.pages | where: "type" , "project") | sort:"date" %}
+{% for project in projects reversed %}
+  <article class="project">
+    <div class="project-image project-{{ type }}" style="background-image: url({{ project.visual.image }});background-color: {{ project.visual.background }}"></div>
+    <div class="project-description project-{{ type }}" style="background-color: {{ project.visual.background }};">
+      <div class="project-content">
+        <h1><a href="{{project.homepage}}">{{project.title}}</a></h1>
+        <p>{{project.content}}</p>
+        <p><a class="btn" href="{{project.homepage}}" data-color="{{ project.visual.background }}">Visit {{project.title}}</a></p>
+      </div>
+    </div>
+    {% if type == 'odd'  %}
+      {% assign type = 'even' %}
+    {% else %}
+      {% assign type = 'odd' %}
+    {% endif %}
+  </article>
+{% endfor %}
+</div>
+

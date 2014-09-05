@@ -1,0 +1,78 @@
+---
+layout: default
+---
+{% if paginator.previous_page %}
+  <h2>Journal Page {{ paginator.page }}</h2>
+{% else %}
+  <h1>Hi, I’m David Turner</h1>
+  <p>I’m the CTO of <a href="https://getinvited.to/">Get Invited</a>, and creator of <a href="http://simply-written.com/">Simply Written</a> and <a href="https://referenceit.org/">ReferenceIt</a>. I dislike keeping useful knowledge a secret, and make a point of trying to share as much as possible. What use is knowledge, after all, if people can’t benefit from it?</p>
+  <p>To that end I have created this journal where I can share my thoughts on design and development. My journal will contain tutorials, thoughts, and inspirations about the processes I use in my work. By sharing my work and my thought processes, I hope that others can learn from what I've done and improve upon it.</p>
+  <h2>Latest Posts</h2>
+{% endif %}
+{% assign excerpt = 'true' %}
+{% for post in paginator.posts %}
+  <article itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+      <h1 class="post-title" itemprop="headline">
+        {% if post.link.external %}
+        <a rel="bookmark" class="post-link" href="{{ post.link.external }}">{{ post.title }}</a>
+        {% else %}
+        <a rel="bookmark" class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        {% endif %}
+      </h1>
+    </header>
+    {% if excerpt == 'true'  %}
+    <p class="post-meta">Posted on <time class="entry-time" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">{% assign d = post.date | date: "%-d"  %}
+    {{ post.date | date: "%B" }}
+    {% case d %}{% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+    {{ post.date | date: "%Y" }}</time>{% if post.author %} by <span class="entry-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="entry-author-name" itemprop="name">{{ post.author }}</span></span>{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+    {% if post.image.featured.src %}
+    <img src="{{ post.image.featured.src | prepend: site.baseurl | prepend: site.url }}" alt="{{ post.image.featured.alt }}" {% if post.image.featured.width %}width="{{ post.image.featured.width }}"{% endif %} {% if post.image.featured.height %}height="{{ post.image.featured.height }}"{% endif %} />
+    {% endif %}
+
+    {% if post.link.external %}
+      <div class="entry-content" itemprop="text">
+      {{ post.content }}
+      </div>
+      <a rel="bookmark" class="btn" href="{{ post.link.external }}">Visit Site</a>
+    {% else %}
+      <div class="entry-content" itemprop="text">
+      {{ post.excerpt }}
+      </div>
+      <a rel="bookmark" class="btn" href="{{ post.url | prepend: site.baseurl }}">Read Article</a>
+    {% endif %}
+    {% assign excerpt = 'true' %}
+    {% endif %}
+  </article>
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+<ul class="pagination">
+  {% if paginator.previous_page %}
+    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' }}">&laquo; Prev</a></li>
+  {% else %}
+    <li><a class="current--page" href="{{ / | prepend: site.baseurl }}">&laquo; Prev</a></li>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      {% if page == 1 %}
+      <li><a class="current--page" href="{{ / | prepend: site.baseurl }}">{{ page }}</a></li>
+      {% else %}
+      <li><a class="current--page" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+      {% endif %}
+    {% elsif page == 1 %}
+      <li><a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+    {% else %}
+      <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
+  {% else %}
+    <li><a class="current--page" href="{{ paginator.total_pages | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
+  {% endif %}
+</ul>
+{% endif %}

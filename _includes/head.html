@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content="{{ site.description }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:type" content="blog"/>
+  <meta name="twitter:site" content="@HerrWulf" />
+  <meta name="twitter:creator" content="@HerrWulf" />
+  <meta property="og:site_name" content="{{ site.title }}"/>
+  {% if page.title %}
+  <meta name="twitter:title" content="{{ page.title }} • {{ site.title }}" />
+  <meta property="og:title" content="{{ page.title }} • {{ site.title }}" />
+  {% else %}
+  <meta name="twitter:title" content="{{ site.title }}" />
+  <meta property="og:title" content="{{ site.title }}" />
+  {% endif %}
+  {% if page.url %}
+  <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
+  {% endif %}
+  {% if page.twitter %}
+  <meta name="twitter:description" content="{{ page.twitter }}" />
+  {% else %}
+  <meta name="twitter:description" content="{{ site.twitter }}" />
+  {% endif %}
+  {% if page.image %}
+  <meta name="twitter:image:src" content="{{ page.image.featured.src | replace: '.svg', '.png' | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:image" content="{{ page.image.featured.src | replace: '.svg', '.png'  | prepend: site.baseurl | prepend: site.url}}" />
+  {% else %}
+  <meta name="twitter:image:src" content="{{ "/apple-touch-icon.png" | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:image" content="{{ "/apple-touch-icon.png" | prepend: site.baseurl | prepend: site.url }}"/>
+  {% endif %}
+  <title>{% if page.title %}{{ page.title }} • {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <link rel="stylesheet" href="{{ "/css/site.live.css" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+  <link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="alternate" type="application/rss+xml" title="{{ site.title }}" />
+
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+  <![endif]-->
+  <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
+</head>
+<body>

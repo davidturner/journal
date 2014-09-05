@@ -1,0 +1,13 @@
+<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+	<ul>
+		{% for link in site.links %}
+    <li itemprop="url">
+      {% if link.external %}
+      <a class="link-{{ link.title | downcase | replace ' ', '-' }}" href="{{ link.url }}" itemprop="name">{{ link.title }}</a>
+      {% else %}
+      <a class="link-{{ link.title | downcase | replace ' ', '-' }}" href="{{ link.url | prepend: site.baseurl | prepend: site.url }}" itemprop="name">{{ link.title }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+	</ul>
+</nav>
