@@ -126,7 +126,7 @@ As always your comments are appreciated, both below in the comments area and [on
 [5]: https://referenceit.org/-assets/css/site.live.css
 [6]: http://css-tricks.com/musings-on-preprocessing/
 [7]: http://css-tricks.com/sass-vs-less/
-[8]: https://twitter.com/intent/tweet?original_referer=&source=Optimising+Your+Site:+CSS=&amp;+JavaScript&text=@HerrWulf&url=http://davidturner.name/journal/optimising-your-site-css-and-javascript
+[8]: https://twitter.com/intent/tweet?original_referer=&source=Optimising+Your+Site:+CSS=&amp;+JavaScript&text=@HerrWulf&url=https://davidturner.name/journal/optimising-your-site-css-and-javascript
 
 [ReferenceIt]: https://referenceit.org
 [CodeKit]: http://incident57.com/codekit/

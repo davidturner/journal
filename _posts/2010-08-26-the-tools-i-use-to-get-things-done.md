@@ -210,17 +210,3 @@ If you have any apps that you use that Iâ€™ve not covered or mentioned here, Iâ€
 [12]: http://www.leemunroe.com/15-mac-apps-web-designers-should-have-in-their-dock/
 [13]: http://www.leemunroe.com/recommended-mac-apps/
 [14]: http://www.gracesmith.co.uk/category/dock-series/
-
-[i1]: http://davidturner.name/wp-content/uploads/2010/09/TextExpander.png
-[i2]: http://davidturner.name/wp-content/uploads/2010/09/Less.png
-[i3]: http://davidturner.name/wp-content/uploads/2010/09/MAMP-PRO.png
-[i4]: http://davidturner.name/wp-content/uploads/2010/09/Suitcase-Fusion-3.png
-[i5]: http://davidturner.name/wp-content/uploads/2010/09/TextMate.png
-[i6]: http://davidturner.name/wp-content/uploads/2010/09/Coda.png
-[i7]: http://davidturner.name/wp-content/uploads/2010/09/Transmit.png
-[i8]: http://davidturner.name/wp-content/uploads/2010/09/Sequel-Pro.png
-[i9]: http://davidturner.name/wp-content/uploads/2010/09/Pixelmator.png
-[i10]: http://davidturner.name/wp-content/uploads/2010/09/ScreenFlow.png
-[i11]: http://davidturner.name/wp-content/uploads/2010/09/Things.png
-[i12]: http://davidturner.name/wp-content/uploads/2010/09/MacJournal.png
-[i13]: http://davidturner.name/wp-content/uploads/2010/09/Dropbox.png

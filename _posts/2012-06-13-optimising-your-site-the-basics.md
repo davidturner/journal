@@ -103,7 +103,7 @@ This post covers some of the basics of optimising your site so that it loads mor
 [0]: /optimising-your-site-the-basics/
 [1]: http://googlewebmastercentral.blogspot.co.uk/2010/04/using-site-speed-in-web-search-ranking.html
 [2]: /sometimes-less-is-more/
-[3]: https://twitter.com/intent/tweet?original_referer=&source=Optimising+Your+Site+-+The+Basics&text=@HerrWulf&url=http://davidturner.name/journal/optimising-your-site/
+[3]: https://twitter.com/intent/tweet?original_referer=&source=Optimising+Your+Site+-+The+Basics&text=@HerrWulf&url=https://davidturner.name/journal/optimising-your-site/
 
 [ImageOptim]: http://imageoptim.com/
 [RIOT]: http://luci.criosweb.ro/riot/

@@ -6,7 +6,7 @@ twitter: "CTO and cofounder of Get Invited (https://getinvited.to). Creator of S
 baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://wip.theinternetisfor.info"
 # url: "http://localhost:4000"
-url: "http://davidturner.name" # the base hostname & protocol for your site
+url: "https://davidturner.name" # the base hostname & protocol for your site
 twitter_username: HerrWulf
 github_username:  davidturner
 timezone: "Europe/London"

@@ -130,7 +130,7 @@ Want to add something to what I've said? Chime in below on the comments or [hit 
 [6]: http://fontfabric.com/social-media-icons-pack/
 [7]: http://duckbox.net/tests/jonnyMenu.php
 [8]: http://www.alistapart.com/issues/299
-[9]: https://twitter.com/intent/tweet?original_referer=&source=Optimising+Your+Site%3A+Images&text=@HerrWulf&url=http://davidturner.name/journal/optimising-your-site-images
+[9]: https://twitter.com/intent/tweet?original_referer=&source=Optimising+Your+Site%3A+Images&text=@HerrWulf&url=https://davidturner.name/journal/optimising-your-site-images
 
 [Kyle Gawley]: http://twitter.com/kylegawley
 [Vizuali]: http://vizua.li

@@ -18,7 +18,7 @@ layout: default
         {% if post.link.external %}
         <a rel="bookmark" class="post-link" href="{{ post.link.external }}">{{ post.title }}</a>
         {% else %}
-        <a rel="bookmark" class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a rel="bookmark" class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
         {% endif %}
       </h1>
     </header>
@@ -40,7 +40,7 @@ layout: default
       <div class="entry-content" itemprop="text">
       {{ post.excerpt }}
       </div>
-      <a rel="bookmark" class="btn" href="{{ post.url | prepend: site.baseurl }}">Read Article</a>
+      <a rel="bookmark" class="btn" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">Read Article</a>
     {% endif %}
     {% assign excerpt = 'true' %}
     {% endif %}
@@ -50,29 +50,29 @@ layout: default
 {% if paginator.total_pages > 1 %}
 <ul class="pagination">
   {% if paginator.previous_page %}
-    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' }}">&laquo; Prev</a></li>
+    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' | prepend: site.url }}">&laquo; Prev</a></li>
   {% else %}
-    <li><a class="current--page" href="{{ / | prepend: site.baseurl }}">&laquo; Prev</a></li>
+    <li><a class="current--page" href="{{ / | prepend: site.baseurl | prepend: site.url }}">&laquo; Prev</a></li>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
       {% if page == 1 %}
-      <li><a class="current--page" href="{{ / | prepend: site.baseurl }}">{{ page }}</a></li>
+      <li><a class="current--page" href="{{ / | prepend: site.baseurl | prepend: site.url }}">{{ page }}</a></li>
       {% else %}
-      <li><a class="current--page" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+      <li><a class="current--page" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page | prepend: site.url }}">{{ page }}</a></li>
       {% endif %}
     {% elsif page == 1 %}
-      <li><a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+      <li><a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">{{ page }}</a></li>
     {% else %}
-      <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+      <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page | prepend: site.url }}">{{ page }}</a></li>
     {% endif %}
   {% endfor %}
 
   {% if paginator.next_page %}
-    <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
+    <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">Next &raquo;</a></li>
   {% else %}
-    <li><a class="current--page" href="{{ paginator.total_pages | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
+    <li><a class="current--page" href="{{ paginator.total_pages | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">Next &raquo;</a></li>
   {% endif %}
 </ul>
 {% endif %}
