@@ -21,6 +21,8 @@ layout: default
     </header>
     <div class="entry-content" itemprop="text">
     {{ content | replace:'src="/', 'src="[[url]]/' | replace:'[[url]]', site.url }}
+    <hr />
+    <p>The source content of this article can be viewed <a href="//github.com/davidturner/journal/tree/master/_posts/{{ page.date | date: "%Y-%m-%d" }}-{{ page.url | replace: '/', '' }}.md">on GitHub</a>.</p>
     </div>
   </article>
 
