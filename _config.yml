@@ -17,7 +17,7 @@ author:
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+#highlighter: pygments
 
 owner:
   name:           David Turner
@@ -54,3 +54,4 @@ links:
 
 include: ['.htaccess']
 exclude: ['Rakefile.rb','Gemfile','Gemfile.lock','feed.xsl']
+gems: [jekyll-paginate]
